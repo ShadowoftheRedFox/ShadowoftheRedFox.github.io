@@ -1,0 +1,55 @@
+.container {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.active {
+    text-decoration: underline solid 1px white;
+    text-underline-offset: 10px;
+}
+
+.navBar {
+    background-color: var(--space_cadet);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+.navBar .navigation {
+    float: left;
+    margin: 0 auto;
+    padding-left: 10px;
+}
+
+.navBar .parameters {
+    float: right;
+    margin: 0 auto;
+    padding-right: 10px;
+}
+
+.navBar ul {
+    height: 80px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navBar ul li {
+    color: var(--isabeline);
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    list-style: none;
+    padding: 0 10px;
+    transition: background .5s ease-in-out;
+    width: max-content;
+}
+
+.navBar ul li:hover {
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    text-decoration: underline solid 1px white;
+    text-underline-offset: 10px;
+}
