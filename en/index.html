@@ -13,16 +13,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/Styles/main.css">
+    <link rel="stylesheet" href="../resources/Styles/dropdown.css">
+    <link rel="stylesheet" href="../resources/Styles/animations.css">
+    <link rel="stylesheet" href="../resources/Styles/navigation.css">
     <link rel="stylesheet" href="../resources/Plugins/normalize.css">
     <script src="../resources/Plugins/modernizr-custom.js" type="text/javascript"></script>
 </head>
 
 <body style="text-align: center;">
-    <h1>Coming soon!</h1>
-    <p>More informations on our <a href="https://discord.gg/5mF5AHnRCr" target="_blank">Discord server!</a></p>
-    <iframe src="https://discord.com/widget?id=967813750067454052&theme=dark" width="350" height="500"
-        allowtransparency="true" frameborder="0"
-        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    <p id="secret" style="height: 80px;">Stop messing with the code!</p>
+    <div class="navBar">
+        <div class="container">
+            <ul class="navigation">
+                <li><a href="#aboutMeTitle">Game</a></li>
+                <li><a href="#projectTitle">Development</a></li>
+            </ul>
+            <ul class="parameters">
+                <li class="dropdown">
+                    <span class="dropbtn">Theme</span>
+                    <div class="dropdown-content">
+                        <a href="#">Light</a>
+                        <a href="#">Dark</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <span class="dropbtn">Language</spawn>
+                        <div class="dropdown-content">
+                            <a href="../fr/index.html">Français</a>
+                            <a href="#">English</a>
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <h1>Coming soon!</h1>
+        <p>More informations on our <a href="https://discord.gg/5mF5AHnRCr" target="_blank">Discord server!</a></p>
+        <iframe src="https://discord.com/widget?id=967813750067454052&theme=dark" width="350" height="500"
+            allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
 </body>
 
 </html>
