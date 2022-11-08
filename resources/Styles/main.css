@@ -5,6 +5,7 @@
 }
 
 :root {
+    --theme: "light";
     --link: rgb(26, 109, 234);
     --space_cadet: #22223B;
     --space_cadet_bis: #1d1d32;
