@@ -43,3 +43,17 @@ function toggleTheme(theme = "dark") {
 function GetRootVariable(string) {
     return getComputedStyle(document.querySelector(":root")).getPropertyValue(`--${string}`);
 }
+
+function init() {
+    const copyright = document.getElementById("copyrightJS");
+    if (!copyright) return console.error("Can't set the copyright year!");
+    copyright.innerHTML = `© ${new Date().getFullYear()} Kyrazail Adventure | This website is available under the &#8203`;
+    const license = document.getElementById("copyrightJSLicense");
+    if (!license) {
+        copyright.innerHTML += "Apache License 2.0";
+        return console.error("Can't set the license link!");
+    }
+    license.innerHTML = "Apache License 2.0";
+}
+
+window.onload = init;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <title id="title">Kyrazail Adventure</title>
@@ -16,43 +16,91 @@
     <link rel="stylesheet" href="../resources/Styles/dropdown.css">
     <link rel="stylesheet" href="../resources/Styles/animations.css">
     <link rel="stylesheet" href="../resources/Styles/navigation.css">
+    <script src="../resources/js/main.js" type="text/javascript"></script>
+
     <link rel="stylesheet" href="../resources/Plugins/normalize.css">
     <script src="../resources/Plugins/modernizr-custom.js" type="text/javascript"></script>
 </head>
 
-<body style="text-align: center;">
-    <p id="secret" style="height: 80px;">Arrêtez de modifier le code!</p>
-    <div class="navBar">
-        <div class="container">
-            <ul class="navigation">
-                <li><a href="#aboutMeTitle">Jeux</a></li>
-                <li><a href="#projectTitle">Développement</a></li>
-            </ul>
-            <ul class="parameters">
-                <li class="dropdown">
-                    <span class="dropbtn">Thème</span>
-                    <div class="dropdown-content">
-                        <a href="#">Clair</a>
-                        <a href="#">Sombre</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <span class="dropbtn">Langue</span>
-                    <div class="dropdown-content">
-                        <a href="#">Français</a>
-                        <a href="../en/index.html">English</a>
-                    </div>
-                </li>
-            </ul>
+<body>
+    <div class="wrapper">
+        <p id="secret" style="height: 80px;">Stop messing with the code!</p>
+        <div class="navBar">
+            <div class="container">
+                <ul class="navigation">
+                    <li><a href="#Game">Jeu</a></li>
+                    <li><a href="#Development">Développement</a></li>
+                </ul>
+                <ul class="parameters">
+                    <li class="dropdown">
+                        <span class="dropbtn">Thème</span>
+                        <div class="dropdown-content">
+                            <a onclick="toggleTheme('light')">Clair</a>
+                            <a onclick="toggleTheme('dark')">Sombre</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropbtn">Langage</span>
+                        <div class="dropdown-content">
+                            <a href="#">Français</a>
+                            <a href="../en/index.html">English</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div>
+            <div id="Hub">
+                <h1 class="title">Welcome on this page</h1>
+            </div>
+
+            <div id="Game">
+                <div class="title">About the game</div>
+                <div lass="content">
+
+                </div>
+            </div>
+
+            <div id="Development">
+                <div class="title">Development news</div>
+                <div lass="content"></div>
+            </div>
+        </div> -->
+
+        <div style="text-align:center;">
+            <h1>Arrive bientôt!</h1>
+            <p>Plus d'informations sur notre <a href="https://discord.gg/5mF5AHnRCr" target="_blank">serveur
+                    Discord!</a></p>
+            <iframe src="https://discord.com/widget?id=967813750067454052&theme=dark" width="350" height="500"
+                allowtransparency="true" frameborder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>
     </div>
-    <div>
-        <h1>Arrive bientôt!</h1>
-        <p>Plus d'information sur notre <a href="https://discord.gg/5mF5AHnRCr" target="_blank">serveur Discord!</a></p>
-        <iframe src="https://discord.com/widget?id=967813750067454052&theme=dark" width="350" height="500"
-            allowtransparency="true" frameborder="0"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </div>
+    <footer>
+        <div class="copyright">
+            <img src="../favicon.ico" alt="GameIcon" height="30px">
+            <p id="copyrightJS"></p>
+            <a href="../LICENSE" id="copyrightJSLicense"></a>
+        </div>
+        <div class="footerGrid">
+            <div class="footerGridItem">
+                <h5>Contactez nous:</h5>
+                <ul class="column">
+                    <li><a href="mailto:kyra.devs@gmail.com">kyra.devs@gmail.com</a></li>
+                    <li><a href="https://discord.gg/5mF5AHnRCr">Serveur Discord</a></li>
+                </ul>
+            </div>
+            <div class="footerGridItem">
+                <h5>Liens:</h5>
+                <ul class="column">
+                    <li><a href="https://shadowoftheredfox.itch.io/kyrazail-adventure">Jeu en ligne</a></li>
+                    <li><a href="https://github.com/ShadowoftheRedFox/Kyrazail-Adventure-Dev">Code source</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
 </body>
 
 </html>
