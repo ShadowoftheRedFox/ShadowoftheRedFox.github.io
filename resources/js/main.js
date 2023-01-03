@@ -44,16 +44,86 @@ function GetRootVariable(string) {
     return getComputedStyle(document.querySelector(":root")).getPropertyValue(`--${string}`);
 }
 
+function paramParser(string) {
+    const parsed = string.split("?");
+    if (parsed[1]) {
+        const params = parsed[1].split("&");
+        const r = { lang: "en" };
+        params.forEach(param => {
+            let p = param.split("=");
+            r[p[0]] = p[1];
+        });
+        return r;
+    }
+    return { lang: "en" };
+}
+
+const TradClassFR = [
+    "Arrêtez de bidouiller le code!",
+    "Jeu",
+    "Développement",
+    "Mini jeux",
+    "Thème",
+    "Clair",
+    "Sombre",
+    "Arrive bientôt!",
+    "Plus d'informations sur notre <a href=\"https://discord.gg/5mF5AHnRCr\" target=\"_blank\">serveur Discord!</a>",
+    "Contactez nous:",
+    "Serveur Discord",
+    "Liens:",
+    "Jeu en ligne",
+    "Code ource"
+];
+const TradClassEN = [
+    "Stop messing with the code!",
+    "Game",
+    "Development",
+    "Mini games",
+    "Theme",
+    "Bright",
+    "Dark",
+    "Coming soon!",
+    "More information on our <a href=\"https://discord.gg/5mF5AHnRCr\" target=\"_blank\">Discord server!</a>",
+    "Contact us:",
+    "Discord server",
+    "Links:",
+    "Online game",
+    "Source code"
+];
+
+function trad(debug = false) {
+    const classes = Array.from(document.getElementsByClassName("lang"));
+    if (window.site.lang == "fr") {
+        const html = document.getElementsByTagName("html").item(0);
+        if (html) html.lang = "fr";
+        classes.forEach((el, id) => {
+            el.innerHTML = (debug === true ? id + " " : "") + TradClassFR[id];
+        });
+    } else {
+        const html = document.getElementsByTagName("html").item(0);
+        if (html) html.lang = "en";
+        classes.forEach((el, id) => {
+            el.innerHTML = (debug === true ? id + " " : "") + TradClassEN[id];
+        });
+    }
+}
+
 function init() {
+    window.site = paramParser(window.location.href);
     const copyright = document.getElementById("copyrightJS");
     if (!copyright) return console.error("Can't set the copyright year!");
-    copyright.innerHTML = `© ${new Date().getFullYear()} Kyrazail Adventure | This website is available under the &#8203`;
+    if (window.site.lang == "fr") {
+        copyright.innerHTML = `© ${new Date().getFullYear()} Kyrazail Adventure | Ce site est sous la license &#8203`;
+    } else {
+        copyright.innerHTML = `© ${new Date().getFullYear()} Kyrazail Adventure | This website is available under the &#8203`;
+    }
     const license = document.getElementById("copyrightJSLicense");
     if (!license) {
         copyright.innerHTML += "Apache License 2.0";
         return console.error("Can't set the license link!");
     }
     license.innerHTML = "Apache License 2.0";
+    trad();
 }
 
 window.onload = init;
