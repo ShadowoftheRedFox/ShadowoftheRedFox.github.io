@@ -35,6 +35,36 @@ function toggleTheme(theme = "dark") {
     }
 }
 
+function switchLang(lang = "en") {
+    const a = Array.from(document.getElementsByTagName("a"));
+    if (!a.length) return;
+    a.forEach($ => {
+        if ($.href.length > 0) {
+            $.href += "";
+        }
+    });
+}
+
+/**
+ * @param {string} href 
+ * @param {string[]} param 
+ * @param {string[]} value 
+ * @returns {string}
+ */
+function setParam(href, param, value) {
+    if (!href || href.split("?").length === 0) {
+        return `?lang=${window.site.lang}`;
+    } else {
+        const s = href.split("?");
+        s[1].split("&").forEach((arg, i) => {
+            const a = arg.split("=");
+            if (param.includes(a[0])) {
+                a[1] = value[i];
+            }
+        });
+    }
+}
+
 /**
  * 
  * @param {string} string 
@@ -59,7 +89,7 @@ function paramParser(string) {
 }
 
 const TradClassFR = [
-    "Arrêtez de bidouiller le code!",
+    "Vous m'avez trouvé! Cliquez moi.",
     "Jeu",
     "Développement",
     "Mini jeux",
@@ -75,7 +105,7 @@ const TradClassFR = [
     "Code ource"
 ];
 const TradClassEN = [
-    "Stop messing with the code!",
+    "You found me! Click me.",
     "Game",
     "Development",
     "Mini games",
