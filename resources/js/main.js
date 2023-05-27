@@ -20,7 +20,7 @@ function toggleTheme(theme = "dark") {
      */
     const StyleRoot = root.style;
 
-    console.log(GetRootVariable("theme"));
+    // console.log(GetRootVariable("theme"));
     switch (theme) {
         case "dark": {
             StyleRoot.setProperty('--theme', 'dark');
@@ -35,22 +35,12 @@ function toggleTheme(theme = "dark") {
     }
 }
 
-function switchLang(lang = "en") {
-    const a = Array.from(document.getElementsByTagName("a"));
-    if (!a.length) return;
-    a.forEach($ => {
-        if ($.href.length > 0) {
-            $.href += "";
-        }
-    });
-}
-
 /**
  * @param {string} href 
  * @param {string[]} param 
  * @param {string[]} value 
  * @returns {string}
- */
+*/
 function setParam(href, param, value) {
     if (!href || href.split("?").length === 0) {
         return `?lang=${window.site.lang}`;
@@ -69,7 +59,7 @@ function setParam(href, param, value) {
  * 
  * @param {string} string 
  * @returns {any | undefined}
- */
+*/
 function GetRootVariable(string) {
     return getComputedStyle(document.querySelector(":root")).getPropertyValue(`--${string}`);
 }
@@ -86,6 +76,40 @@ function paramParser(string) {
         return r;
     }
     return { lang: "en" };
+}
+
+function init() {
+    window.site = paramParser(window.location.href);
+    const copyright = document.getElementById("copyrightJS");
+    if (!copyright) return console.error("Can't set the copyright year!");
+    if (window.site.lang == "fr") {
+        copyright.innerHTML = `© ${new Date().getFullYear()} Kyrazail Adventure | Ce site est sous la license &#8203`;
+    } else {
+        copyright.innerHTML = `© ${new Date().getFullYear()} Kyrazail Adventure | This website is available under the &#8203`;
+    }
+    const license = document.getElementById("copyrightJSLicense");
+    if (!license) {
+        copyright.innerHTML += "Apache License 2.0";
+        return console.error("Can't set the license link!");
+    }
+    license.innerHTML = "Apache License 2.0";
+
+    switchLang("en");
+}
+
+function switchLang(lang = "en") {
+    // get all  'lang' attributes
+    const langElements = document.querySelectorAll("[lang]");
+    // hide them all
+    langElements.forEach(el => {
+        el.style.display = "none";
+    });
+
+    // show only the selected language
+    const wantedLangElements = document.querySelectorAll(`[lang="${lang}"]`);
+    wantedLangElements.forEach(el => {
+        el.style.display = "";
+    });
 }
 
 const TradClassFR = [
@@ -121,39 +145,5 @@ const TradClassEN = [
     "Source code"
 ];
 
-function trad(debug = false) {
-    const classes = Array.from(document.getElementsByClassName("lang"));
-    if (window.site.lang == "fr") {
-        const html = document.getElementsByTagName("html").item(0);
-        if (html) html.lang = "fr";
-        classes.forEach((el, id) => {
-            el.innerHTML = (debug === true ? id + " " : "") + TradClassFR[id];
-        });
-    } else {
-        const html = document.getElementsByTagName("html").item(0);
-        if (html) html.lang = "en";
-        classes.forEach((el, id) => {
-            el.innerHTML = (debug === true ? id + " " : "") + TradClassEN[id];
-        });
-    }
-}
-
-function init() {
-    window.site = paramParser(window.location.href);
-    const copyright = document.getElementById("copyrightJS");
-    if (!copyright) return console.error("Can't set the copyright year!");
-    if (window.site.lang == "fr") {
-        copyright.innerHTML = `© ${new Date().getFullYear()} Kyrazail Adventure | Ce site est sous la license &#8203`;
-    } else {
-        copyright.innerHTML = `© ${new Date().getFullYear()} Kyrazail Adventure | This website is available under the &#8203`;
-    }
-    const license = document.getElementById("copyrightJSLicense");
-    if (!license) {
-        copyright.innerHTML += "Apache License 2.0";
-        return console.error("Can't set the license link!");
-    }
-    license.innerHTML = "Apache License 2.0";
-    trad();
-}
 
 window.onload = init;

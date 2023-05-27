@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title id="title">Kyrazail Adventure</title>
+    <title id="title" lang="en">The Kyrazail Adventure</title>
+    <title id="title" lang="fr">L'aventure Kyrazail</title>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <link rel="apple-touch-icon" href="./favicon.ico">
     <link rel="icon" href="./favicon.ico" type="image/png">
@@ -24,65 +25,95 @@
 
 <body>
     <div class="wrapper">
-        <a id="secret" style="height: 80px;" class="lang" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Stop
-            messing with the code!</a>
+        <a id="secret" style="height: 80px;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <span lang="en">Stop messing with the code!</span>
+            <span lang="fr">Arrêtez de trifouiller le code!</span>
+        </a>
         <div class="navBar">
             <div class="container">
                 <ul class="navigation">
-                    <li><a href="#Game" class="lang">Game</a></li>
-                    <li><a href="#Development" class="lang">Development</a></li>
+                    <li>
+                        <a href="#Game" lang="en">Game</a>
+                        <a href="#Game" lang="fr">Jeu</a>
+                    </li>
+                    <li>
+                        <a href="#Development" lang="en">Development</a>
+                        <a href="#Development" lang="fr">Développement</a>
+                    </li>
                 </ul>
                 <ul class="parameters">
                     <li class="dropdown">
-                        <a href="./minigames/index.html"><span class="dropbtn lang">Mini
-                                games</span></a>
+                        <a href="./minigames/index.html">
+                            <span class="dropbtn">
+                                <span lang="en">
+                                    Mini games
+                                </span>
+                                <span lang="fr">
+                                    Mini jeux
+                                </span>
+                            </span>
+                        </a>
                         <div class="dropdown-content">
-                            <a href="./Asteroid">Asteroid</a>
-                            <a href="./Lantern">Lantern</a>
-                            <a href="./Echecs">Chess</a>
+                            <a href="./Asteroid" lang="en">Asteroid</a>
+                            <a href="./Asteroid" lang="fr">Astéroïd</a>
+                            <a href="./Lantern" lang="en">Lantern</a>
+                            <a href="./Lantern" lang="fr">Lanterne</a>
+                            <a href="./Echecs" lang="en">Chess</a>
+                            <a href="./Echecs" lang="fr">ÉChecs</a>
                         </div>
                     </li>
                     <li class="dropdown">
-                        <span class="dropbtn lang">Theme</span>
+                        <span class="dropbtn">
+                            <span lang="en">Theme</span>
+                            <span lang="fr">Thème</span>
+                        </span>
                         <div class="dropdown-content">
-                            <a onclick="toggleTheme('light')" class="lang">Bright</a>
-                            <a onclick="toggleTheme('dark')" class="lang">Dark</a>
+                            <a onclick="toggleTheme('light')" lang="en">Bright</a>
+                            <a onclick="toggleTheme('dark')" lang="en">Dark</a>
+                            <a onclick="toggleTheme('light')" lang="fr">Claire</a>
+                            <a onclick="toggleTheme('dark')" lang="fr">Sombre</a>
                         </div>
                     </li>
                     <li class="dropdown">
-                        <span class="dropbtn" class="lang">Langage</span>
+                        <span class="dropbtn" lang="en">Language</span>
+                        <span class="dropbtn" lang="fr">Langage</span>
                         <div class="dropdown-content">
-                            <a href="?lang=fr" onclick="switchLang('fr')">Français</a>
-                            <a href="?lang=en" onclick="switchLang('en')">English</a>
-                            <!-- TODO -->
+                            <a onclick="switchLang('fr')">Français</a>
+                            <a onclick="switchLang('en')">English</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <!-- <div>
+        <div hidden>
             <div id="Hub">
-                <h1 class="title lang">Welcome on this page</h1>
+                <h1 class="title" lang="en">Welcome on this page</h1>
             </div>
 
             <div id="Game">
-                <div class="title lang">About the game</div>
+                <div class="title" lang="en">About the game</div>
                 <div class="content">
 
                 </div>
             </div>
 
             <div id="Development">
-                <div class="title lang">Development news</div>
+                <div class="title" lang="en">Development news</div>
                 <div class="content"></div>
             </div>
-        </div> -->
+        </div>
 
         <div style="text-align:center;">
-            <h1 class="lang">Coming soon!</h1>
-            <p class="lang">More informations on our <a href="https://discord.gg/5mF5AHnRCr" target="_blank">Discord
-                    server!</a></p>
+            <h1 lang="en">Coming soon!</h1>
+            <h1 lang="fr">Arrive bientot!</h1>
+            <p lang="en">More informations on our
+                <a href="https://discord.gg/5mF5AHnRCr" target="_blank">Discord server!</a>
+            </p>
+            <p lang="fr">Plus d'informations sur notre
+                <a href="https://discord.gg/5mF5AHnRCr" target="_blank">serveur Discord!</a>
+            </p>
+
             <iframe src="https://discord.com/widget?id=967813750067454052&theme=dark" width="350" height="500"
                 allowtransparency="true" frameborder="0"
                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
@@ -96,18 +127,30 @@
         </div>
         <div class="footerGrid">
             <div class="footerGridItem">
-                <h5 class="lang">Contact us:</h5>
+                <h5 lang="en">Contact us:</h5>
+                <h5 lang="fr">Contactez nous:</h5>
                 <ul class="column">
-                    <li><a href="mailto:kyra.devs@gmail.com">kyra.devs@gmail.com</a></li>
-                    <li><a href="https://discord.gg/5mF5AHnRCr" class="lang">Discord server</a></li>
+                    <li>
+                        <a href="mailto:kyra.devs@gmail.com">kyra.devs@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/5mF5AHnRCr" lang="en">Discord server</a>
+                        <a href="https://discord.gg/5mF5AHnRCr" lang="fr">Serveur Discord</a>
+                    </li>
                 </ul>
             </div>
             <div class="footerGridItem">
-                <h5 class="lang">Liens:</h5>
+                <h5 lang="en">Link:</h5>
+                <h5 lang="fr">Lien:</h5>
                 <ul class="column">
-                    <li><a href="https://shadowoftheredfox.itch.io/kyrazail-adventure" class="lang">Online game</a></li>
-                    <li><a href="https://github.com/ShadowoftheRedFox/Kyrazail-Adventure-Dev" class="lang">Source
-                            code</a></li>
+                    <li>
+                        <a href="https://shadowoftheredfox.itch.io/kyrazail-adventure" lang="en">Online game</a>
+                        <a href="https://shadowoftheredfox.itch.io/kyrazail-adventure" lang="fr">Jeu en ligne</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ShadowoftheRedFox/Kyrazail-Adventure-Dev" lang="en">Source code</a>
+                        <a href="https://github.com/ShadowoftheRedFox/Kyrazail-Adventure-Dev" lang="fr">Code source</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -115,3 +158,9 @@
 </body>
 
 </html>
+
+<!-- 
+(\_/)
+(._.)
+/>Ok
+-->
