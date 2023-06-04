@@ -50,6 +50,6 @@
 .navBar ul li:hover {
     cursor: pointer;
     transition: all .5s ease-in-out;
-    text-decoration: underline solid 1px white;
+    text-decoration: underline solid 1px var(--isabeline);
     text-underline-offset: 10px;
 }

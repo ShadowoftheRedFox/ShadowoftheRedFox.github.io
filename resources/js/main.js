@@ -2,7 +2,7 @@
 Defautlt root variables value:
 
 --theme: "light";
---link: rgb(26, 109, 234);
+--link: #1a6dea;
 --space_cadet: #22223B;
 --space_cadet_bis: #1d1d32;
 --independance: #4A4E69;
@@ -25,11 +25,23 @@ function toggleTheme(theme = "dark") {
         case "dark": {
             StyleRoot.setProperty('--theme', 'dark');
             StyleRoot.setProperty("--isabeline", "#000000");
+            StyleRoot.setProperty("--link", "#ffffff");
+            StyleRoot.setProperty("--space_cadet", "#000000");
+            StyleRoot.setProperty("--space_cadet_bis", "#000000");
+            StyleRoot.setProperty("--independance", "#000000");
+            StyleRoot.setProperty("--heliotrope_gray", "#000000");
+            StyleRoot.setProperty("--silver_pink", "#000000");
             break;
         }
         default: {
             StyleRoot.setProperty('--theme', 'light');
             StyleRoot.setProperty("--isabeline", "#F2E9E4");
+            StyleRoot.setProperty("--link", "#1a6dea");
+            StyleRoot.setProperty("--space_cadet", "#22223B");
+            StyleRoot.setProperty("--space_cadet_bis", "#1d1d32");
+            StyleRoot.setProperty("--independance", "#4A4E69");
+            StyleRoot.setProperty("--heliotrope_gray", "#9A8C98");
+            StyleRoot.setProperty("--silver_pink", "#C9ADA7");
             break;
         }
     }
@@ -111,39 +123,6 @@ function switchLang(lang = "en") {
         el.style.display = "";
     });
 }
-
-const TradClassFR = [
-    "Vous m'avez trouvé! Cliquez moi.",
-    "Jeu",
-    "Développement",
-    "Mini jeux",
-    "Thème",
-    "Clair",
-    "Sombre",
-    "Arrive bientôt!",
-    "Plus d'informations sur notre <a href=\"https://discord.gg/5mF5AHnRCr\" target=\"_blank\">serveur Discord!</a>",
-    "Contactez nous:",
-    "Serveur Discord",
-    "Liens:",
-    "Jeu en ligne",
-    "Code ource"
-];
-const TradClassEN = [
-    "You found me! Click me.",
-    "Game",
-    "Development",
-    "Mini games",
-    "Theme",
-    "Bright",
-    "Dark",
-    "Coming soon!",
-    "More information on our <a href=\"https://discord.gg/5mF5AHnRCr\" target=\"_blank\">Discord server!</a>",
-    "Contact us:",
-    "Discord server",
-    "Links:",
-    "Online game",
-    "Source code"
-];
 
 
 window.onload = init;

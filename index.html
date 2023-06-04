@@ -25,7 +25,7 @@
 
 <body>
     <div class="wrapper">
-        <a id="secret" style="height: 80px;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <a id="secret" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
             <span lang="en">Stop messing with the code!</span>
             <span lang="fr">Arrêtez de trifouiller le code!</span>
         </a>
@@ -44,13 +44,11 @@
                 <ul class="parameters">
                     <li class="dropdown">
                         <a href="./minigames/index.html">
-                            <span class="dropbtn">
-                                <span lang="en">
-                                    Mini games
-                                </span>
-                                <span lang="fr">
-                                    Mini jeux
-                                </span>
+                            <span lang="en" class="dropbtn">
+                                Mini games
+                            </span>
+                            <span lang="fr" class="dropbtn">
+                                Mini jeux
                             </span>
                         </a>
                         <div class="dropdown-content">
@@ -60,13 +58,13 @@
                             <a href="./Lantern" lang="fr">Lanterne</a>
                             <a href="./Echecs" lang="en">Chess</a>
                             <a href="./Echecs" lang="fr">ÉChecs</a>
+                            <a href="./background-animation" lang="en">Animation</a>
+                            <a href="./background-animation" lang="fr">Animation</a>
                         </div>
                     </li>
                     <li class="dropdown">
-                        <span class="dropbtn">
-                            <span lang="en">Theme</span>
-                            <span lang="fr">Thème</span>
-                        </span>
+                        <span lang="en" class="dropbtn">Theme</span>
+                        <span lang="fr" class="dropbtn">Thème</span>
                         <div class="dropdown-content">
                             <a onclick="toggleTheme('light')" lang="en">Bright</a>
                             <a onclick="toggleTheme('dark')" lang="en">Dark</a>
@@ -86,37 +84,67 @@
             </div>
         </div>
 
-        <div hidden>
-            <div id="Hub">
-                <h1 class="title" lang="en">Welcome on this page</h1>
-            </div>
+        <div class="main-content">
+            <div>
+                <div id="Hub">
+                    <h1 class="title" lang="en">Welcome on this page</h1>
+                    <h1 class="title" lang="fr">Bienvenu sur le site</h1>
+                    <p lang="en">It'll probably be pain to read or navigate, it's my own website using my own little
+                        knowledge.
+                        I'll do my best to improve it as time pass.</p>
+                    <p lang="fr">Il sera probablement douloureux de lire ou de naviguer, c'est mon propre site web en
+                        utilisant le peu de connaissance que j'ai.
+                        Je ferai de mon mieux pour l'améliorer avec le temps.
+                    </p>
+                </div>
 
-            <div id="Game">
-                <div class="title" lang="en">About the game</div>
-                <div class="content">
+                <div id="Game">
+                    <div class="title" lang="en">About the game</div>
+                    <div class="title" lang="fr">Sur le jeu</div>
+                    <div class="content">
+                        <p lang="en">It's a project I'm working on for nearly 3 years now. I just wanted to make a
+                            little game from scratch by myself.</p>
+                        <p lang="fr">C'est un projet où j'y travaille depuis presque 3 ans maintenant. Je voulais faire
+                            juste un petit jeu à partir de rien.</p>
+                        <p lang="en">It's a 2D RPG using HTML/CSS/JS. And I'll add in this game any fantasy I have,
+                            though I'm open for suggestions.</p>
+                        <p lang="fr">C'est un JDR en 2D en utilisant HTML/CSS/JS. Et j'ajouterai dans ce jeu toutes les
+                            fantaisies que j'ai, même si je suis ouvert au suggestions.</p>
+                        <p lang="en">I keep the code open source, and most of my projects linked to this website are
+                            public too (such as the minigames).</p>
+                        <p lang="fr">Je garde le code source publique, et la plupart des projets liés à cette page le
+                            sont aussi (comme les minijeux).</p>
+                    </div>
+                </div>
 
+                <div id="Development">
+                    <div class="title" lang="en">Development news</div>
+                    <div class="title" lang="fr">Nouvelles de développement</div>
+                    <div class="content">
+                        <p lang="en">Most development news will be on the <a href="https://discord.gg/5mF5AHnRCr"
+                                target="_blank">Discord server</a>, but here will be provided the milestones and other
+                            things.</p>
+                        <p lang="fr">La plupart des nouvelles de développement se feront sur le <a
+                                href="https://discord.gg/5mF5AHnRCr" target="_blank">serveur Discord</a>, mais ici
+                            seront marqué les grandes avancés et d'autres choses.</p>
+                    </div>
                 </div>
             </div>
 
-            <div id="Development">
-                <div class="title" lang="en">Development news</div>
-                <div class="content"></div>
+            <div>
+                <h1 lang="en">Coming soon!</h1>
+                <h1 lang="fr">Arrive bientot!</h1>
+                <p lang="en">More informations on our
+                    <a href="https://discord.gg/5mF5AHnRCr" target="_blank">Discord server!</a>
+                </p>
+                <p lang="fr">Plus d'informations sur notre
+                    <a href="https://discord.gg/5mF5AHnRCr" target="_blank">serveur Discord!</a>
+                </p>
+
+                <iframe src="https://discord.com/widget?id=967813750067454052&theme=dark" width="350" height="350"
+                    allowtransparency="true" frameborder="0"
+                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
             </div>
-        </div>
-
-        <div style="text-align:center;">
-            <h1 lang="en">Coming soon!</h1>
-            <h1 lang="fr">Arrive bientot!</h1>
-            <p lang="en">More informations on our
-                <a href="https://discord.gg/5mF5AHnRCr" target="_blank">Discord server!</a>
-            </p>
-            <p lang="fr">Plus d'informations sur notre
-                <a href="https://discord.gg/5mF5AHnRCr" target="_blank">serveur Discord!</a>
-            </p>
-
-            <iframe src="https://discord.com/widget?id=967813750067454052&theme=dark" width="350" height="500"
-                allowtransparency="true" frameborder="0"
-                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>
     </div>
     <footer>
@@ -162,5 +190,5 @@
 <!-- 
 (\_/)
 (._.)
-/>Ok
+/>Ow
 -->
